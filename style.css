@@ -1,0 +1,156 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            transition: 0.3s;
+        }
+
+
+        body {
+            background: linear-gradient(135deg, #153677, #4e085f);
+            color: #333333;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .todo-app {
+            width: 100%;
+            max-width: 540px;
+            background: #ffffff;
+            margin: 100px auto 20px;
+            padding: 40px 30px 70px;
+            border-radius: 10px;
+        }
+
+        .header-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .theme-toggle {
+            background: #edeef0;
+            color: #333333;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #edeef0;
+            border-radius: 30px;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 10px;
+            font-size: 16px;
+            color: #000000;
+        }
+
+        button#qoshish-btn {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 16px 50px;
+            background: #ff5945;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 40px;
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            top: 12px;
+            left: 8px;
+            background: #ffffff;
+            border: 2px solid #ccc;
+        }
+
+        ul li.checked {
+            color: #555555;
+            text-decoration: line-through;
+        }
+
+        ul li.checked::before {
+            background: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        ul li span {
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+            color: inherit;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        ul li span:hover {
+            background: #edeef0;
+        }
+
+ 
+        body.dark-mode {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+        }
+
+        body.dark-mode .todo-app {
+            background: #1e293b;
+            color: #f8fafc;
+        }
+
+        body.dark-mode .row,
+        body.dark-mode .theme-toggle {
+            background: #334155;
+            color: #ffffff;
+        }
+
+        body.dark-mode input {
+            color: #ffffff;
+        }
+
+        body.dark-mode ul li::before {
+            background: #1e293b;
+        }
+
+        body.dark-mode ul li.checked {
+            color: #94a3b8;
+        }
+
+        body.dark-mode ul li span:hover {
+            background: #475569;
+        }
